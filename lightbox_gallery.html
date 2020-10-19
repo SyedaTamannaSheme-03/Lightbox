@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Making Gallery Using LightBox</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+
+    <link rel="stylesheet" href="css/lightbox_gallery.css" />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <a class="site-brand" href="#">
+                <img src="images/logo.JPG"> LightBox_Gallery </a>
+
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+        <nav class="navbar-mob">
+            <div class="hamburger-btn">
+                <i class="fas fa-bars" id="bar" onclick="showMenu()"></i>
+                <i class="fas fa-times" id="times" onclick="closeMenu()"></i>
+            </div>
+
+            <ul id="mob-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+
+   
+    <div class="covergallery">
+        <h2 class="heading"> GALLERY </h2>
+        <div class="gallery">
+            <a href="images/1.jpg" data-lightbox="mygallery" data-title="WHITE FLOWER IN AQA COLOR"><img src="images/1-small.jpg" alt=""></a>
+            <a href="images/2.jpg" data-lightbox="mygallery" data-title="BLACK FUR"><img src="images/2-small.jpg" alt=""></a>
+            <a href="images/3.jpg" data-lightbox="mygallery" data-title="LION"><img src="images/3-small.jpg" alt=""></a>
+            <a href="images/4.jpg" data-lightbox="mygallery" data-title="CAMERA & PICTURE"><img src="images/4-small.jpg" alt=""></a>
+            <a href="images/5.jpg" data-lightbox="mygallery" data-title="CUTE BROWN & WHITE RABIT"><img src="images/5-small.jpg" alt=""></a>
+            <a href="images/6.jpg" data-lightbox="mygallery" data-title="NATURE WITH HILLS, TRESS & WATERFALL"><img src="images/6-small.jpg" alt=""></a>
+            <a href="images/7.jpg" data-lightbox="mygallery" data-title="GIVING HEART"><img src="images/7-small.jpg" alt=""></a>
+            <a href="images/8.jpg" data-lightbox="mygallery" data-title="TIGRESS"><img src="images/8-small.jpg" alt=""></a>
+            <a href="images/9.jpg" data-lightbox="mygallery" data-title="BRIDGE IN HILL"><img src="images/9-small.jpg" alt=""></a>
+            <a href="images/10.jpg" data-lightbox="mygallery" data-title="IFEAL TOWER IN FRANCE"><img src="images/10-small.jpg" alt=""></a>
+            <a href="images/11.jpg" data-lightbox="mygallery" data-title="BEAUTIFUL PEAKPCK"><img src="images/11-small.jpg" alt=""></a>
+            <a href="images/12.jpg" data-lightbox="mygallery" data-title="SUNGLASS"><img src="images/12-small.jpg" alt=""></a>
+            <a href="images/13.jpg" data-lightbox="mygallery" data-title="HAND & MAGNET"><img src="images/13-small.jpg" alt=""></a>
+            <a href="images/14.jpg" data-lightbox="mygallery" data-title="COLOURFUL BUTTERFLY"><img src="images/14-small.jpg" alt=""></a>
+            <a href="images/15.jpg" data-lightbox="mygallery" data-title="LIGHTS IN WATER"><img src="images/15-small.jpg" alt=""></a>
+
+        </div>
+    </div>
+
+    <script>
+        function showMenu() {
+            var b = document.getElementById("bar");
+            var t = document.getElementById("times");
+            var m = document.getElementById("mob-menu");
+            b.style.display = "none";
+            t.style.display = "block";
+            m.style.display = "block";
+        }
+
+        function closeMenu() {
+            var b = document.getElementById("bar");
+            var t = document.getElementById("times");
+            var m = document.getElementById("mob-menu");
+            b.style.display = "block";
+            t.style.display = "none";
+            m.style.display = "none";
+        }
+        $(document).ready(function() {
+            $('.toggle').click(function() {
+                $('.toggle').toggleClass('active')
+                $('nav').toggleClass('active')
+            })
+        });
+    </script>
+
+</body>
+
+</html>
